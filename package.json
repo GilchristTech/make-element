@@ -1,0 +1,10 @@
+{
+  "name": "make-element",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "keywords": ["browser", "DOM"],
+  "author": "Gilchrist Pitts",
+  "license": "MIT",
+  "description": "A tiny utility for creating DOM elements with nested JS objects"
+}
