@@ -1,10 +1,21 @@
 {
-  "name": "make-element",
+  "name": "@gilchrist/make-element",
   "version": "1.0.0",
-  "main": "index.js",
   "type": "module",
-  "keywords": ["browser", "DOM"],
+  "main": "index.js",
+  "description": "A tiny utility for creating DOM elements with nested JS objects",
+  "keywords": [
+    "browser",
+    "DOM"
+  ],
+  "homepage": "https://github.com/GilchristTech/make-element#readme",
+  "bugs": {
+    "url": "https://github.com/GilchristTech/make-element/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GilchristTech/make-element.git"
+  },
   "author": "Gilchrist Pitts",
-  "license": "MIT",
-  "description": "A tiny utility for creating DOM elements with nested JS objects"
+  "license": "MIT"
 }
