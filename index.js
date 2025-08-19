@@ -131,12 +131,8 @@ export function makeElement (obj={}) {
 
   if (obj.data) {
     for (let [key, value] of Object.entries(obj.data)) {
-      element.setAttribute("data-"+key, value);
+      element.dataset[key] = value;
     }
-  }
-
-  if (obj.map) {
-    obj.map(element);
   }
 
   if (obj.assign) {
@@ -149,6 +145,10 @@ export function makeElement (obj={}) {
         throw new TypeError("Value in bind is not a function");
       element[key] = func.bind(element);
     }
+  }
+
+  if (obj.apply) {
+    obj.apply(element);
   }
 
   return element;
