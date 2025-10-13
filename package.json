@@ -1,6 +1,6 @@
 {
   "name": "@gilchrist/make-element",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "index.js",
   "description": "A tiny utility for creating DOM elements with nested JS objects",

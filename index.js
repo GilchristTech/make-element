@@ -120,7 +120,35 @@ export function makeElement (obj={}) {
   }
 
   if (obj.onClick) {
+    if (typeof obj.onClick !== "function") {
+        throw new TypeError(`Expected event handler with value ${handler} to be a function, got ${typeof handler}`);
+    }
     element.addEventListener("click", obj.onClick);
+  }
+
+  if (obj.onChange) {
+    if (typeof obj.onChange !== "function") {
+        throw new TypeError(`Expected event handler with value ${handler} to be a function, got ${typeof handler}`);
+    }
+    element.addEventListener("change", obj.onChange);
+  }
+
+  if (obj.events) {
+    if (typeof obj.events !== "object") {
+      throw new TypeError(`obj.events was expected to be an object, got ${typeof obj.events}`);
+    }
+
+    for (let [event, handler] of Object.entries(obj.events)) {
+      if (typeof event !== "string") {
+        throw new TypeError(`Expected event name with value ${event} to be a string, got ${typeof event}`);
+      } else if (handler === null) {
+        continue;
+      } else if (typeof handler !== "function") {
+        throw new TypeError(`Expected event handler with value ${handler} to be a function, got ${typeof handler}`);
+      } else {
+        element.addEventListener(event, handler);
+      }
+    }
   }
 
   if (obj.attributes) {
@@ -148,6 +176,9 @@ export function makeElement (obj={}) {
   }
 
   if (obj.apply) {
+    if (typeof obj.apply !== "function") {
+        throw new TypeError(`Expected obj.apply with value ${handler} to be a function, got ${typeof handler}`);
+    }
     obj.apply(element);
   }
 

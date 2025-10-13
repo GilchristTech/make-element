@@ -93,7 +93,9 @@ interpreted as follows:
 | `style`             | Object of CSS property/value pairs.                                                               |
 | `child`             | Single nested element (recursively processed).                                                    |
 | `children`          | Array of nested elements (recursively processed).                                                 |
-| `onClick`           | Sets the elements onclick handler.                                                                |
+| `onClick`           | Sets the element's onclick handler.                                                               |
+| `onChange`          | Sets the element's onchange handler.                                                              |
+| `events`            | Object of event handlers. Keys are the name of the event, and values are event handler function (`element.addEventListener(key, value)`). Handlers are either functions or `null`, in which case they are skipped. |
 | `attributes`        | Object of attribute values.                                                                       |
 | `data`              | Object of <code>data-&ast;</code> attributes (`{ userId: 123 }` → `element.dataset["data-user-id"] = "123"`). |
 | `apply`             | After the element is created, runs a function with the element as an argument (`apply(element)`). |
