@@ -16,6 +16,14 @@
     "type": "git",
     "url": "git+https://github.com/GilchristTech/make-element.git"
   },
+  "scripts": {
+    "test": "vitest run",
+    "dev": "vitest"
+  },
   "author": "Gilchrist Pitts",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@vitest/browser-playwright": "^4.1.0",
+    "vitest": "^4.1.0"
+  }
 }
