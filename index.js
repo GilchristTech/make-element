@@ -64,7 +64,7 @@ export function makeElement (obj={}) {
     } else if (element_attribute.startsWith("#")) {
       id = element_attribute.slice(1).trim();
     } else {
-      tag = element_attribute.trim();
+      tag = element_attribute.trim() || "div";
     }
   }
 
